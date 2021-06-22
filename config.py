@@ -79,3 +79,35 @@ config.DATASET.SELECT_DATA = False
 config.DATASET.FLIP = True
 config.DATASET.SCALE_FACTOR = 0.3
 config.DATASET.ROT_FACTOR = 40
+
+# 학습
+config.TRAIN = edict()
+
+config.TRAIN.SHORT_BOTTOM = True
+config.TRAIN.LR_FACTOR = 0.1
+config.TRAIN.LR_STEP = [90,110]
+config.TRAIN.LR = 0.001
+config.TRAIN.OPTIMIZER = 'adam'
+config.TRAIN.MOMENTUM = 0.9
+config.TRAIN.WD = 0.0001
+config.TRAIN.NESTEROV = False
+config.TRAIN.GAMMA1 = 0.99
+config.TRAIN.GAMMA2 = 0.0
+
+config.TRAIN.BEGIN_EPOCH = 0
+config.TRAIN.END_EPOCH = 140
+config.TRAIN.RESUME = False
+
+config.TRAIN.BATCH_SIZE = 64
+config.TRAIN.SHUFFLE = True
+
+# 테스트
+config.TEST = edict()
+
+config.TEST.BATCH_SIZE = 32
+config.TEST.FLIP_TEST = True
+config.TEST.POST_PROCESS = True
+config.TEST.SHIFT_HEATMAP = True
+
+config.TEST.USE_GT_BBOX = False
+# NMS
