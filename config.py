@@ -111,3 +111,30 @@ config.TEST.SHIFT_HEATMAP = True
 
 config.TEST.USE_GT_BBOX = False
 # NMS
+config.TEST.OKS_THRE = 0.5
+config.TEST.iN_VIS_THRE = 0.0
+config.TEST.COCO_BBOX_FILE=''
+config.TEST.MODEL_FILE = 1.0
+config.TEST.IMAGE_TRE = 0.0
+config.TEST.NMS_THRE = 1.0
+
+# DEBUG
+config.DEBUG = edict()
+config.DEBUG.DEBUG = True
+config.DEBUG.SAVE_BATCH_IMAGES_GT = False
+config.DEBUG.SAVE_BATCH_IMAGES_PRED = False
+config.DEBUG.SAVE_HEATMAPS_GT = False
+config.DEBUG.SAVE_HEATMAPS_PRED = False
+
+config.kps_suymmetry = [(1,2), (3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16)]
+config.kps_lines = [(0,1),(0,2),(6,8),(8,10),(5,7),(7,9),(12,14),(14,16),(11,13),(13,15),(5,6),(11,12)]
+config.kps_sigmas = np.array([
+    .26, .35, .25, 0, 0, .79, .79, .72, .72, .62, .62, 1.07, 1.07, 0.87, .87, .89, .89
+]) / 10.0
+config.ignore_kps = [3,4]
+config.train_vis_dir = './train_visualize'
+config.val_vis_dir = './valid_visualize'
+config.pixel_means = np.array([[123.68, 116.78, 103.94]])
+config.oks_nms = True
+config.oks_nms_thr = 0.9
+config.result_dir = './results'
